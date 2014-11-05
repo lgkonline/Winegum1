@@ -6320,6 +6320,16 @@ button.close {
 }
 body {
   cursor: default;
+  background-color: #333333;
+}
+code,
+kbd,
+pre,
+samp,
+#main p {
+  cursor: auto;
+}
+#wrapper {
   background: url(images/bg2.jpg) #914c3b top center;
 }
 #header,
@@ -6335,9 +6345,15 @@ body {
   font-weight: 300;
   font-size: 67.5px;
   text-align: center;
-  margin-top: 24px;
-  margin-bottom: 12px;
+  margin-top: 34px;
+  margin-bottom: 22px;
   text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+#header #title a,
+#header #title a:hover,
+#header #title a:focus {
+  color: #fff;
+  text-decoration: none;
 }
 #nav {
   font-size: 1.1em;
@@ -6353,6 +6369,12 @@ body {
 #nav #nav-menu li {
   display: inline-block;
   float: left;
+}
+@media only screen and (max-width: 768px) {
+  #nav #nav-menu li {
+    display: block;
+    float: none;
+  }
 }
 #nav #nav-menu li a {
   display: block;
@@ -6370,8 +6392,17 @@ body {
 }
 #nav #search {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 15px;
+}
+@media only screen and (max-width: 768px) {
+  #nav #search {
+    top: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #nav #search {
+    bottom: 0;
+  }
 }
 #nav #search .btn {
   padding-left: 14px;
@@ -6420,13 +6451,13 @@ body {
 }
 #main {
   z-index: 1;
+  border-top: 4px solid #ecf0f1;
+  border-bottom: 4px solid #ecf0f1;
+  background-color: #ecf0f1;
 }
 #main .container {
   background-color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
   padding: 30px 20px;
-  border-top: 4px solid #ecf0f1;
-  border-bottom: 4px solid #ecf0f1;
 }
 #main p {
   font-family: "Source Serif Pro", serif;
@@ -6434,11 +6465,10 @@ body {
 }
 #footer {
   z-index: 2;
+  background-color: #333333;
 }
 #footer .container {
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
   color: #fff;
-  background-color: #333333;
   padding-top: 15px;
   padding-bottom: 15px;
 }

@@ -36,19 +36,21 @@ $(function() {
 	
 	$('#search.active #search-toggle').remove();
 	
-//	$('#nav-menu').each(function() {
-		$(this).find('#nav-menu li:not(.active) a, #search-toggle').hover(
-			function() {
-				$(this).css('background-color', 'rgba(255,255,255,0)');
-				$(this).animate({
-					backgroundColor: 'rgba(255,255,255,.5)'
-				}, 100);
-			},			
-			function() {
-				$(this).animate({
-					backgroundColor: 'rgba(255,255,255,0)'
-				});
-			}
-		);
-//	});
+	$('#nav-menu li:not(.active) a, #search-toggle').hover(
+		function() {
+			$(this).css('background-color', 'rgba(255,255,255,0)');
+			$(this).animate({
+				backgroundColor: 'rgba(255,255,255,.5)'
+			}, 100);
+		},			
+		function() {
+			$(this).animate({
+				backgroundColor: 'rgba(255,255,255,0)'
+			});
+		}
+	);
+	
+	$('#nav-open').click(function() {
+		$('#nav-menu').toggleClass('hidden-xs');
+	});
 });

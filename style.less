@@ -15,6 +15,14 @@
 
 body {
 	cursor: default;
+	background-color: @gray-dark;
+}
+
+code, kbd, pre, samp, #main p {
+	cursor: auto;
+}
+
+#wrapper {
 	background: url(images/bg2.jpg) @wine-red top center;
 }
 
@@ -29,9 +37,14 @@ body {
 		font-weight: 300;
 		font-size: (@font-size-base * 4.5);
 		text-align: center;
-		margin-top: 24px;
-		margin-bottom: 12px;
+		margin-top: 34px;
+		margin-bottom: 22px;
 		text-shadow: @bride-shadow;
+		
+		a, a:hover, a:focus {
+			color: #fff;
+			text-decoration: none;
+		}
 	}
 }
 
@@ -50,6 +63,11 @@ body {
 		li {
 			display: inline-block;
 			float: left;
+			
+			@media only screen and (max-width: 768px) {
+				display: block;
+				float: none;
+			}
 			
 			a {
 				display: block;
@@ -72,8 +90,14 @@ body {
 	
 	#search {
 		position: absolute;
-		right: 0;
-		bottom: 0;
+		right: 15px;
+		
+		@media only screen and (max-width: 768px) {
+			top: 0;
+		}
+		@media only screen and (min-width: 768px) {
+			bottom: 0;
+		}
 		
 		.btn {
 			padding-left: 14px;
@@ -128,13 +152,13 @@ body {
 
 #main {
 	z-index: 1;
+	border-top: 4px solid @cloud-white;
+	border-bottom: 4px solid @cloud-white;
+	background-color: @cloud-white;
 	
 	.container {
 		background-color: #fff;
-		box-shadow: @bride-shadow;
 		padding: 30px 20px;
-		border-top: 4px solid @cloud-white;
-		border-bottom: 4px solid @cloud-white;
 	}
 	
 	p {
@@ -145,11 +169,10 @@ body {
 
 #footer {
 	z-index: 2;
+	background-color: @gray-dark;
 	
 	.container {
-		box-shadow: @bride-shadow;
 		color: #fff;
-		background-color: @gray-dark;
 		padding-top: 15px;
 		padding-bottom: 15px;
 	}

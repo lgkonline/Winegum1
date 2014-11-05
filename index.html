@@ -10,74 +10,78 @@
     </head>
 
     <body>
-    	<div id="header">
-    		<div class="container">
-				<h1 id="title">Winegum</h1>
-    		</div>
-    	</div><!-- /#header -->
-    	
-    	<div id="nav">
-    		<div class="container">
-    			<ul id="nav-menu">
-    				<li class="active"><a href="#">Home</a></li>
-    				<li><a href="#">Health</a></li>
-    				<li><a href="#">Ingredients</a></li>
-    				<li><a href="#">Superpowers</a></li>
-    			</ul>
-    			
-    			<div id="search">
-    				<button type="button" id="search-toggle" class="btn btn-link"><span class="glyphicon glyphicon-search"></span></button>
-    			
-    				<div id="search-form">
-						<div class="input-group">
-							<input id="search-input" type="text" class="form-control">
-							<span class="input-group-btn">
-								<button id="search-btn" type="button" class="btn "><span class="glyphicon glyphicon-search"></span></button>
-							</span>
+    	<div id="wrapper">
+			<div id="header">
+				<div class="container">
+					<h1 id="title"><a href="#">Winegum</a></h1>
+				</div>
+			</div><!-- /#header -->
+
+			<div id="nav">
+				<div class="container">
+					<button id="nav-open" type="button" class="btn btn-default btn-lg visible-xs">MENU</button>
+				
+					<ul id="nav-menu" class="hidden-xs">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Health</a></li>
+						<li><a href="#">Ingredients</a></li>
+						<li><a href="#">Superpowers</a></li>
+					</ul>
+
+					<div id="search">
+						<button type="button" id="search-toggle" class="btn btn-link"><span class="glyphicon glyphicon-search"></span></button>
+
+						<div id="search-form">
+							<div class="input-group">
+								<input id="search-input" type="text" class="form-control">
+								<span class="input-group-btn">
+									<button id="search-btn" type="button" class="btn "><span class="glyphicon glyphicon-search"></span></button>
+								</span>
+							</div>
 						</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div><!-- /#nav -->
-    
-    	<div id="main">
+					</div><!-- /#search -->
+				</div>
+			</div><!-- /#nav -->
+		</div><!-- /#wrapper -->
+
+		<div id="main">
 			<div class="container">
 				<div id="content">
 					<h1>Hallo Welt</h1>
-					
+
 					<p>
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 					</p>
-					
+
 					<pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
-					
+
 					<hr>
-					
+
 					<form class="form-horizontal">
 						<div class="form-group">
 							<label for="email" class="col-sm-2 control-label">E-Mail</label>
-							
+
 							<div class="col-sm-10">
 								<input type="email" class="form-control" id="email">
 							</div>
 						</div>						
-						
+
 						<div class="form-group">
 							<label for="name" class="col-sm-2 control-label">Name</label>
-							
+
 							<div class="col-sm-10">
 								<input type="text" class="form-control" id="name">
 							</div>
 						</div>						
-						
+
 						<div class="form-group">
 							<label for="comment" class="col-sm-2 control-label">Kommentar</label>
-							
+
 							<div class="col-sm-10">
 								<textarea id="comment" class="form-control" rows="5"></textarea>
 							</div>
 						</div>					
-						
+
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
 								<button type="button" class="btn btn-primary">Comment</button>
