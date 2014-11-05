@@ -36,7 +36,7 @@ $(function() {
 	
 	$('#search.active #search-toggle').remove();
 	
-	$('#nav-menu li:not(.active) a, #search-toggle').hover(
+	$('#nav-menu li:not(.active) a, #search-toggle, #nav-open').hover(
 		function() {
 			$(this).css('background-color', 'rgba(255,255,255,0)');
 			$(this).animate({
