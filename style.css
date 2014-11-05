@@ -6337,6 +6337,7 @@ body {
   text-align: center;
   margin-top: 24px;
   margin-bottom: 12px;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 #nav {
   font-size: 1.1em;
@@ -6361,7 +6362,6 @@ body {
 #nav #nav-menu li a:hover,
 #nav #nav-menu li a:focus {
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.5);
 }
 #nav #nav-menu li.active a {
   color: #914c3b;
