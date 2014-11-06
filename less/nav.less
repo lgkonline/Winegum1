@@ -1,0 +1,159 @@
+#nav {
+	font-size: 1.1em;
+	
+	.container {
+		position: relative;
+	}
+	
+	#nav-open {
+		padding: 10px 15px;
+		margin-bottom: 1px;
+		color: #fff;
+		display: none;
+		font-weight: 600;
+	
+		@media only screen and (max-width: 767px) {
+			display: inline-block;
+		}
+		
+		.icon-hamburger {
+			float: left;
+			margin-top: 4px;
+			margin-right: 2px;
+			
+			span {
+				background-color: #fff;
+			}
+		}
+	}
+		
+	#nav-open:hover {
+		text-decoration: none;
+	}
+	
+	#nav-menu {
+		font-weight: 300;
+		padding: 0;
+		margin: 0;
+		
+		li {
+			display: inline-block;
+			float: left;
+			
+			@media only screen and (max-width: 767px) {
+				display: block;
+				float: none;
+			}
+			
+			a {
+				display: block;
+				padding: 10px 15px;
+				color: #fff;
+			}
+			a:hover, a:focus {
+				text-decoration: none;
+			}
+		}
+		
+		li:not(.active) {
+			a:active {
+				background-color: @gray-dark !important;
+			}
+		}
+		
+		li.active {
+			a {
+				color: @wine-red;
+				background-color: @cloud-white;
+				box-shadow: @bride-shadow;
+			}
+		}
+	}
+	
+	@media only screen and (max-width: 767px) {
+		#social-icons, #search {
+			top: 0;
+		}
+	}
+	@media only screen and (min-width: 768px) {
+		#social-icons, #search {
+			bottom: 0;
+		}
+	}	
+	
+	#social-icons {
+		margin: 0;
+		padding: 0;
+		right: 15px;
+		
+		@media only screen and (min-width: 768px) {
+			position: absolute;
+		}
+		
+		li {
+			display: inline-block;
+			float: left;
+			
+			.btn {
+				color: #fff;
+				padding: 10px 14px;
+				min-width: 45px;
+				text-align: center;
+			}
+			.btn:hover, .btn:focus {
+				background-color: rgba(255,255,255,.5);
+			}
+			
+			.btn:active, .btn.active {
+				background-color: @gray-dark !important;
+			}
+		}
+	}
+	
+	#search {
+		position: absolute;
+		right: 15px;
+		
+		.btn {
+			padding-left: 14px;
+			padding-right: 14px;
+		}
+		
+		#search-input, #search-btn {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		
+		#search-form {
+			display: none;
+			width: 300px;
+			box-shadow: @bride-shadow;
+			background-color: @cloud-white;
+			
+			.form-control, .btn {
+				background-color: transparent;
+			}
+
+			.form-control {
+				border: none;
+				box-shadow: none;
+				height: 43px;
+			}
+			.form-control:focus {
+				box-shadow: none;
+			}
+
+			.btn {
+				color: @wine-red;
+			}	
+			.btn:hover, .btn:focus {
+				color: @gray-dark;
+			}
+		}
+	}
+	#search.active {
+		#search-form {
+			display: block;
+		}
+	}
+}

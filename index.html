@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <title></title>
         
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="style.css">
     </head>
 
@@ -19,15 +20,30 @@
 
 			<div id="nav">
 				<div class="container">
-					<a href="javascript:void(0);" id="nav-open" type="button">
-						<span class="icon-hamburger">
-							<span></span>
-							<span></span>
-							<span></span>
-						</span>						
-						MENU
-					</a>
 				
+					<ul id="social-icons">
+						<li><a href="#" class="btn btn-link" id="nav-open">
+							<span class="icon-hamburger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>						
+							MENU							
+						</a></li>
+						
+						<li class="si-twitter si"><a href="#" title="Twitter" class="btn btn-link" data-rgb="52, 152, 219"><i class="fa fa-twitter"></i></a></li>
+						<li class="si-youtube si"><a href="#" title="YouTube" class="btn btn-link" data-rgb="231, 76, 60"><i class="fa fa-youtube-play"></i></a></li>
+						<li class="si-facebook si"><a href="#" title="Facebook" class="btn btn-link" data-rgb="59, 89, 153"><i class="fa fa-facebook"></i></a></li>
+						<li class="si-google-plus si"><a href="#" title="Google+" class="btn btn-link" data-rgb="221, 75, 57"><i class="fa fa-google-plus"></i></a></li>
+<!--						<li class="si-instagram si"><a href="#" title="Instagram" class="btn btn-link" data-rgb="81, 127, 164"><i class="fa fa-instagram"></i></a></li>-->
+						<li class="si-github si"><a href="#" title="GitHub" class="btn btn-link" data-rgb="68, 48, 92"><i class="fa fa-github"></i></a></li>
+						<li class="si-vine si"><a href="#" title="Vine" class="btn btn-link" data-rgb="0, 191, 143"><i class="fa fa-vine"></i></a></li>
+						
+						<li><button type="button" title="Search" id="search-toggle" class="btn btn-link"><span class="glyphicon glyphicon-search"></span></button></li>
+					</ul>
+					
+					<div class="clearfix"></div>
+					
 					<ul id="nav-menu" class="hidden-xs">
 						<li class="active"><a href="#">Home</a></li>
 						<li><a href="#">Health</a></li>
@@ -36,7 +52,7 @@
 					</ul>
 
 					<div id="search">
-						<button type="button" id="search-toggle" class="btn btn-link"><span class="glyphicon glyphicon-search"></span></button>
+<!--						<button type="button" id="search-toggle" class="btn btn-link"><span class="glyphicon glyphicon-search"></span></button>-->
 
 						<div id="search-form">
 							<div class="input-group">

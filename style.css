@@ -6376,6 +6376,7 @@ samp,
 }
 #nav #nav-open {
   padding: 10px 15px;
+  margin-bottom: 1px;
   color: #fff;
   display: none;
   font-weight: 600;
@@ -6384,6 +6385,11 @@ samp,
   #nav #nav-open {
     display: inline-block;
   }
+}
+#nav #nav-open .icon-hamburger {
+  float: left;
+  margin-top: 4px;
+  margin-right: 2px;
 }
 #nav #nav-open .icon-hamburger span {
   background-color: #fff;
@@ -6415,41 +6421,66 @@ samp,
 #nav #nav-menu li a:focus {
   text-decoration: none;
 }
+#nav #nav-menu li:not(.active) a:active {
+  background-color: #333333 !important;
+}
 #nav #nav-menu li.active a {
   color: #914c3b;
   background-color: #ecf0f1;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
-#nav #search {
-  position: absolute;
-  right: 15px;
-}
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+  #nav #social-icons,
   #nav #search {
     top: 0;
   }
 }
 @media only screen and (min-width: 768px) {
+  #nav #social-icons,
   #nav #search {
     bottom: 0;
   }
+}
+#nav #social-icons {
+  margin: 0;
+  padding: 0;
+  right: 15px;
+}
+@media only screen and (min-width: 768px) {
+  #nav #social-icons {
+    position: absolute;
+  }
+}
+#nav #social-icons li {
+  display: inline-block;
+  float: left;
+}
+#nav #social-icons li .btn {
+  color: #fff;
+  padding: 10px 14px;
+  min-width: 45px;
+  text-align: center;
+}
+#nav #social-icons li .btn:hover,
+#nav #social-icons li .btn:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#nav #social-icons li .btn:active,
+#nav #social-icons li .btn.active {
+  background-color: #333333 !important;
+}
+#nav #search {
+  position: absolute;
+  right: 15px;
 }
 #nav #search .btn {
   padding-left: 14px;
   padding-right: 14px;
 }
-#nav #search #search-toggle,
 #nav #search #search-input,
 #nav #search #search-btn {
   padding-top: 10px;
   padding-bottom: 10px;
-}
-#nav #search #search-toggle {
-  color: #fff;
-}
-#nav #search #search-toggle:hover,
-#nav #search #search-toggle:focus {
-  background-color: rgba(255, 255, 255, 0.5);
 }
 #nav #search #search-form {
   display: none;
