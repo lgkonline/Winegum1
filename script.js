@@ -36,34 +36,21 @@ $(function() {
 	
 	$('#social-icons .btn').tooltip();
 	
-	$('#nav-menu li:not(.active) a, #social-icons .btn, #nav-open').hover(
-		function() {
-			var attr_rgb = $(this).attr('data-rgb');
-			var opacity = '.9';
-			if (!attr_rgb) {
-				attr_rgb = '255,255,255';
-				opacity = '.5';
-			}
-			
-			$(this).css('background-color', 'rgba(' + attr_rgb + ',0)');
-			$(this).animate({
-				backgroundColor: 'rgba(' + attr_rgb + ',' + opacity + ')'
-			}, 100);
-		},			
-		function() {
-			var attr_rgb = $(this).attr('data-rgb');
-			if (!attr_rgb) {
-				attr_rgb = '255,255,255';
-			}			
-			
-			$(this).animate({
-				backgroundColor: 'rgba(' + attr_rgb + ',0)'
-			}, 200);
-		}
-	);
-	
 	$('#nav-open').click(function() {
-		$('#nav-menu').toggleClass('hidden-xs');
+		$('#nav-menu').toggleClass('hidden-xs hidden-sm');
 		$(this).toggleClass('active');
+	});
+	
+	$('.si > a').each(function() {
+		var color = 'rgba(' + $(this).attr('data-rgb') + ', .9)';
+		
+		$(this).hover(
+			function() {
+				$(this).css('background-color', color);
+			},
+			function() {
+				$(this).css('background-color', 'transparent');
+			}
+		);
 	});
 });

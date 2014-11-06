@@ -2,6 +2,13 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Source+Serif+Pro:700,400);
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+/*
+Theme Name: Winegum
+Theme URI: http://github.com/lgkonline/Winegum
+Description: Winegum will become a WordPress theme with Bootstrap as a backbone.
+Author: Lars Kliesing (LGK)
+Author URI: http://lgkonline.com
+*/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -6318,6 +6325,16 @@ button.close {
 *:focus {
   outline: none !important;
 }
+.appear-transition {
+  -webkit-transition: background 0.3s ease-out 0s;
+  -o-transition: background 0.3s ease-out 0s;
+  transition: background 0.3s ease-out 0s;
+}
+.btn {
+  -webkit-transition: background 0.3s ease-out 0s;
+  -o-transition: background 0.3s ease-out 0s;
+  transition: background 0.3s ease-out 0s;
+}
 body {
   cursor: default;
   background-color: #333333;
@@ -6351,52 +6368,6 @@ samp,
 #footer {
   position: relative;
 }
-#header {
-  color: #fff;
-}
-#header #title {
-  font-weight: 300;
-  font-size: 67.5px;
-  text-align: center;
-  margin-top: 34px;
-  margin-bottom: 22px;
-  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-}
-#header #title a,
-#header #title a:hover,
-#header #title a:focus {
-  color: #fff;
-  text-decoration: none;
-}
-#nav {
-  font-size: 1.1em;
-}
-#nav .container {
-  position: relative;
-}
-#nav #nav-open {
-  padding: 10px 15px;
-  margin-bottom: 1px;
-  color: #fff;
-  display: none;
-  font-weight: 600;
-}
-@media only screen and (max-width: 767px) {
-  #nav #nav-open {
-    display: inline-block;
-  }
-}
-#nav #nav-open .icon-hamburger {
-  float: left;
-  margin-top: 4px;
-  margin-right: 2px;
-}
-#nav #nav-open .icon-hamburger span {
-  background-color: #fff;
-}
-#nav #nav-open:hover {
-  text-decoration: none;
-}
 #nav #nav-menu {
   font-weight: 300;
   padding: 0;
@@ -6406,7 +6377,7 @@ samp,
   display: inline-block;
   float: left;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   #nav #nav-menu li {
     display: block;
     float: none;
@@ -6421,53 +6392,48 @@ samp,
 #nav #nav-menu li a:focus {
   text-decoration: none;
 }
-#nav #nav-menu li:not(.active) a:active {
+#nav #nav-menu li ul {
+  display: block;
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  z-index: 2;
+  background-color: #333333;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+#nav #nav-menu li ul li {
+  float: none;
+  display: block;
+  position: relative;
+}
+#nav #nav-menu li ul li ul {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+#nav #nav-menu li ul li.active a {
+  color: #333333;
+}
+#nav #nav-menu li:hover > ul {
+  visibility: visible;
+  -webkit-transition: background 0.3s ease-out 0s;
+  -o-transition: background 0.3s ease-out 0s;
+  transition: background 0.3s ease-out 0s;
+}
+#nav #nav-menu li:not(.active):hover > a {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  -webkit-transition: background 0.3s ease-out 0s;
+  -o-transition: background 0.3s ease-out 0s;
+  transition: background 0.3s ease-out 0s;
+}
+#nav #nav-menu li:not(.active) > a:active {
   background-color: #333333 !important;
 }
 #nav #nav-menu li.active a {
   color: #914c3b;
   background-color: #ecf0f1;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-}
-@media only screen and (max-width: 767px) {
-  #nav #social-icons,
-  #nav #search {
-    top: 0;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #nav #social-icons,
-  #nav #search {
-    bottom: 0;
-  }
-}
-#nav #social-icons {
-  margin: 0;
-  padding: 0;
-  right: 15px;
-}
-@media only screen and (min-width: 768px) {
-  #nav #social-icons {
-    position: absolute;
-  }
-}
-#nav #social-icons li {
-  display: inline-block;
-  float: left;
-}
-#nav #social-icons li .btn {
-  color: #fff;
-  padding: 10px 14px;
-  min-width: 45px;
-  text-align: center;
-}
-#nav #social-icons li .btn:hover,
-#nav #social-icons li .btn:focus {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-#nav #social-icons li .btn:active,
-#nav #social-icons li .btn.active {
-  background-color: #333333 !important;
 }
 #nav #search {
   position: absolute;
@@ -6509,6 +6475,95 @@ samp,
 }
 #nav #search.active #search-form {
   display: block;
+}
+#nav #social-icons {
+  margin: 0;
+  padding: 0;
+  right: 15px;
+}
+@media only screen and (min-width: 992px) {
+  #nav #social-icons {
+    position: absolute;
+  }
+}
+#nav #social-icons li {
+  display: inline-block;
+  float: left;
+}
+#nav #social-icons li .btn {
+  color: #fff;
+  padding: 10px 14px;
+  min-width: 45px;
+  text-align: center;
+}
+#nav #social-icons li .btn:hover,
+#nav #social-icons li .btn:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: background 0.3s ease-out 0s;
+  -o-transition: background 0.3s ease-out 0s;
+  transition: background 0.3s ease-out 0s;
+}
+#nav #social-icons li .btn:active,
+#nav #social-icons li .btn.active {
+  background-color: #333333 !important;
+}
+#header {
+  color: #fff;
+}
+#header #title {
+  font-weight: 300;
+  font-size: 67.5px;
+  text-align: center;
+  margin-top: 34px;
+  margin-bottom: 22px;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+#header #title a,
+#header #title a:hover,
+#header #title a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+#nav {
+  font-size: 1.1em;
+}
+#nav .container {
+  position: relative;
+}
+#nav #nav-open {
+  padding: 10px 15px;
+  margin-bottom: 1px;
+  color: #fff;
+  display: none;
+  font-weight: 600;
+}
+@media only screen and (max-width: 991px) {
+  #nav #nav-open {
+    display: inline-block;
+  }
+}
+#nav #nav-open .icon-hamburger {
+  float: left;
+  margin-top: 4px;
+  margin-right: 2px;
+}
+#nav #nav-open .icon-hamburger span {
+  background-color: #fff;
+}
+#nav #nav-open:hover {
+  text-decoration: none;
+}
+@media only screen and (max-width: 991px) {
+  #nav #social-icons,
+  #nav #search {
+    top: 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #nav #social-icons,
+  #nav #search {
+    bottom: 0;
+  }
 }
 #main {
   z-index: 1;
