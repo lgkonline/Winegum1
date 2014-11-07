@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title></title>
+        
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+    	<div id="wrapper">
+			<div id="header">
+				<div class="container">
+					<h1 id="title"><a href="#"><img src="images/logo.png"></a> Title</h1>
+				</div>
+			</div><!-- /#header -->
+
+			<div id="nav">
+				<div class="container">
+				
+					<ul id="social-icons">
+						<li><a href="#" class="btn btn-link" id="nav-open">
+							<span class="icon-hamburger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>						
+							MENU							
+						</a></li>
+						
+						<li class="si-twitter si"><a href="#" title="Twitter" class="btn btn-link" data-rgb="52, 152, 219"><i class="fa fa-twitter"></i></a></li>
+						<li class="si-youtube si"><a href="#" title="YouTube" class="btn btn-link" data-rgb="231, 76, 60"><i class="fa fa-youtube-play"></i></a></li>
+						<li class="si-facebook si"><a href="#" title="Facebook" class="btn btn-link" data-rgb="59, 89, 153"><i class="fa fa-facebook"></i></a></li>
+						<li class="si-google-plus si"><a href="#" title="Google+" class="btn btn-link" data-rgb="221, 75, 57"><i class="fa fa-google-plus"></i></a></li>
+<!--						<li class="si-instagram si"><a href="#" title="Instagram" class="btn btn-link" data-rgb="81, 127, 164"><i class="fa fa-instagram"></i></a></li>-->
+						<li class="si-github si"><a href="#" title="GitHub" class="btn btn-link" data-rgb="68, 48, 92"><i class="fa fa-github"></i></a></li>
+						<li class="si-vine si"><a href="#" title="Vine" class="btn btn-link" data-rgb="0, 191, 143"><i class="fa fa-vine"></i></a></li>
+						
+						<li><button type="button" title="Search" id="search-toggle" class="btn btn-link"><span class="glyphicon glyphicon-search"></span></button></li>
+					</ul>
+					
+					<div class="clearfix"></div>
+					
+					<ul id="nav-menu" class="hidden-sm hidden-xs">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Health</a></li>
+						<li><a href="#">Ingredients</a></li>
+						<li><a href="#">Superpowers</a></li>
+						
+						<li>
+							<a href="#">I have more items</a>
+							<ul>
+								<li><a href="#">Ingredients</a></li>
+								<li>
+									<a href="#">Superpowers</a>
+									<ul>
+										<li><a href="#">Lucky feelings</a></li>
+										<li><a href="#">Superpowers</a>
+											<ul>
+												<li><a href="#">And more</a></li>
+												<li><a href="#">children</a></li>
+												<li><a href="#">Hurray!</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="active"><a href="#">Health</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<div id="search">
+						<div id="search-form">
+							<div class="input-group">
+								<input id="search-input" type="text" class="form-control" spellcheck="false">
+								<span class="input-group-btn">
+									<button id="search-btn" type="button" class="btn "><span class="glyphicon glyphicon-search"></span></button>
+								</span>
+							</div>
+						</div>
+					</div><!-- /#search -->
+				</div>
+			</div><!-- /#nav -->
+		</div><!-- /#wrapper -->
+
+		<div id="main">
+			<div class="container">
+				<div id="content">
+					<h1>Hallo Welt</h1>
+
+					<p>
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+					</p>
+
+					<pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+
+					<hr>
+
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="email" class="col-sm-2 control-label">E-Mail</label>
+
+							<div class="col-sm-10">
+								<input type="email" class="form-control" id="email">
+							</div>
+						</div>						
+
+						<div class="form-group">
+							<label for="name" class="col-sm-2 control-label">Name</label>
+
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="name">
+							</div>
+						</div>						
+
+						<div class="form-group">
+							<label for="comment" class="col-sm-2 control-label">Kommentar</label>
+
+							<div class="col-sm-10">
+								<textarea id="comment" class="form-control" rows="5"></textarea>
+							</div>
+						</div>					
+
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button type="button" class="btn btn-primary">Comment</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div><!-- /.container -->
+		</div><!-- /#main -->
+        
+        <div id="footer">
+        	<div class="container">
+        		&copy; Copyright | <a href="#">Link</a>
+        	</div>
+        </div><!-- /#footer -->
+         
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js"></script>          
+        <script src="script.js"></script>          
+    </body>
+</html>
