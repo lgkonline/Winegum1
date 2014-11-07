@@ -29,7 +29,8 @@
 			position: absolute;
 			z-index: 2;
 			background-color: @gray-dark;
-			box-shadow: @bride-shadow;
+			box-shadow: @wide-shadow;
+			max-height: 0px;
 
 			li {
 				float: none;
@@ -53,7 +54,8 @@
 
 	li:hover > ul {
 		visibility: visible;
-		.appear-transition;
+		max-height: 600px;
+		.transition(max-height 0.5s linear);
 	}
 
 	li:not(.active):hover > a {
@@ -67,9 +69,9 @@
 
 	li.active {
 		a {
-			color: @wine-red;
+			color: @primary-color;
 			background-color: @cloud-white;
-			box-shadow: @bride-shadow;
+			box-shadow: @wide-shadow;
 		}
 	}
 }
