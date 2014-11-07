@@ -22,4 +22,10 @@
 			</div><!-- /.container -->
 		</div><!-- /#main -->
         
+
 <?php get_footer(); ?>
+<script>
+	$(document).ready(function() {
+		search_toggle();
+	});
+</script>

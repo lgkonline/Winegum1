@@ -20,12 +20,12 @@ function search_toggle() {
 	$('#search-form').animate({
 		width: '300px'
 	});
+	$('#search-input').select();
 }
 
 $(function() {
 	$('#search-toggle').click(function() {
 		search_toggle();
-		$('#search-input').focus();
 	});
 	
 	$('#search:not(.active) #search-input').blur(function() {

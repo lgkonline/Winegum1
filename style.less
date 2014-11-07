@@ -31,7 +31,7 @@ body {
 	background-color: @gray-dark;
 }
 
-code, kbd, pre, samp, #main p {
+code, kbd, pre, samp, .post-content {
 	cursor: auto;
 }
 
@@ -50,6 +50,17 @@ code, kbd, pre, samp, #main p {
 	}
 }
 
+.dark-zone {
+	background-color: @gray-dark;
+	color: #fff;
+	a {
+		color: lighten(@link-color, 15%);
+	}
+	a:hover, a:focus {
+		color: lighten(@link-color, 30%)
+	}	
+}
+
 #wrapper {
 	background: @primary-bg-img @primary-color top @bg-position-0 center;
 	.box-shadow(@shadow: inset 0px -25px 35px rgba(0,0,0,.3));
@@ -63,6 +74,30 @@ code, kbd, pre, samp, #main p {
 	@import url(less/nav.nav-menu.less);
 	@import url(less/nav.search.less);
 	@import url(less/nav.social-icons.less);
+}
+
+.post {
+	.post-title a:hover {
+		text-decoration: none;
+		border-bottom: 1px solid;
+	}
+	
+	.post-meta {
+		@media only screen and (min-width: 992px) {
+			float: right;
+			margin-left: 20px;
+		}
+		padding: 15px 20px;
+		
+		li {
+			list-style: none;
+		}
+	}
+	
+	.post-meta > li {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
 }
 
 @import url(less/header.less);
