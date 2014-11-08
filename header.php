@@ -14,6 +14,18 @@ elseif (is_page() ) { bloginfo('name'); if(get_bloginfo('name') != "") echo ': '
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
    
    		<?php wp_head(); ?>
+		
+		<style type="text/css">
+			#wrapper {
+				background-image: url(<?php background_image(); ?>);
+				background-color: <?php echo '#'; background_color(); ?>;
+			}
+			#nav #search #search-form .btn,
+			#nav #nav-menu li.current-menu-item > a 
+			{
+				color: <?php echo '#'; background_color(); ?>;
+			}
+		</style>
     </head>
 
     <body>
@@ -50,6 +62,7 @@ elseif (is_page() ) { bloginfo('name'); if(get_bloginfo('name') != "") echo ': '
 					
 					<div class="clearfix"></div>
 					
+<!--
 					<ul id="nav-menu" class="hidden-sm hidden-xs">
 						<li class="active"><a href="#">Home</a></li>
 						<li><a href="#">Health</a></li>
@@ -77,6 +90,15 @@ elseif (is_page() ) { bloginfo('name'); if(get_bloginfo('name') != "") echo ': '
 							</ul>
 						</li>
 					</ul>
+-->
+					
+					<?php
+						wp_nav_menu(array(
+							'theme_location' => 'primary',
+							'menu_class' => 'hidden-sm hidden-xs',
+							'menu_id' => 'nav-menu'
+						));
+					?>
 
 					<div id="search">
 						<div id="search-form">

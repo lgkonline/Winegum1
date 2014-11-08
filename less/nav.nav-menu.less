@@ -27,7 +27,7 @@
 			padding: 0;
 			margin: 0;
 			position: absolute;
-			z-index: 2;
+			z-index: 3;
 			background-color: @gray-dark;
 			box-shadow: @wide-shadow;
 			max-height: 0px;
@@ -44,7 +44,7 @@
 				}
 			}
 
-			li.active a {
+			li.current-menu-item > a {
 				color: @gray-dark;
 			}
 
@@ -58,20 +58,18 @@
 		.transition(max-height 0.5s linear);
 	}
 
-	li:not(.active):hover > a {
+	li:not(.current-menu-item):hover > a {
 		background-color: rgba(255,255,255,.5) !important;
 		.appear-transition;
 	}
 
-	li:not(.active) > a:active {
+	li:not(.current-menu-item) > a:active {
 		background-color: @gray-dark !important;
 	}
 
-	li.active {
-		a {
-			color: @primary-color;
-			background-color: @cloud-white;
-			box-shadow: @wide-shadow;
-		}
+	li.current-menu-item > a {
+		color: @primary-color;
+		background-color: @cloud-white;
+		box-shadow: @wide-shadow;
 	}
 }
