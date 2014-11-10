@@ -25,6 +25,9 @@ elseif (is_page() ) { bloginfo('name'); if(get_bloginfo('name') != "") echo ': '
 			{
 				color: <?php echo '#'; background_color(); ?>;
 			}
+			#title-label {
+				color: <?php echo '#'. get_header_textcolor(); ?>;
+			}
 		</style>
     </head>
 
@@ -32,7 +35,14 @@ elseif (is_page() ) { bloginfo('name'); if(get_bloginfo('name') != "") echo ': '
     	<div id="wrapper">
 			<div id="header">
 				<div class="container">
-					<h1 id="title"><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.png"> <?php bloginfo('name'); ?></a></h1>
+					<h1 id="title">
+						<a href="<?php bloginfo('url'); ?>">
+							<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" id="title-img"> 
+							<?php if (get_header_textcolor() != 'blank') : ?>
+							<span id="title-label"><?php bloginfo('name'); ?></span>
+							<?php endif; ?>
+						</a>
+					</h1>
 				</div>
 			</div><!-- /#header -->
 
@@ -60,43 +70,13 @@ elseif (is_page() ) { bloginfo('name'); if(get_bloginfo('name') != "") echo ': '
 						<li><button type="button" title="Search" id="search-toggle" class="btn btn-link"><span class="glyphicon glyphicon-search"></span></button></li>
 					</ul>
 					
-					<div class="clearfix"></div>
-					
-<!--
-					<ul id="nav-menu" class="hidden-sm hidden-xs">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Health</a></li>
-						<li><a href="#">Ingredients</a></li>
-						<li><a href="#">Superpowers</a></li>
-						
-						<li>
-							<a href="#">I have more items</a>
-							<ul>
-								<li><a href="#">Ingredients</a></li>
-								<li>
-									<a href="#">Superpowers</a>
-									<ul>
-										<li><a href="#">Lucky feelings</a></li>
-										<li><a href="#">Superpowers</a>
-											<ul>
-												<li><a href="#">And more</a></li>
-												<li><a href="#">children</a></li>
-												<li><a href="#">Hurray!</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li class="active"><a href="#">Health</a></li>
-							</ul>
-						</li>
-					</ul>
--->
 					
 					<?php
 						wp_nav_menu(array(
 							'theme_location' => 'primary',
 							'menu_class' => 'hidden-sm hidden-xs',
-							'menu_id' => 'nav-menu'
+							'menu_id' => 'nav-menu',
+							'fallback_cb' => false
 						));
 					?>
 

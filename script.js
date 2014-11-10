@@ -53,4 +53,8 @@ $(function() {
 			}
 		);
 	});
+	
+	if (! ($('#nav-menu').length) ) {
+		$('#nav-open').remove();
+	}
 });

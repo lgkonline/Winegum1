@@ -6394,6 +6394,7 @@ samp,
   #nav #nav-menu li {
     display: block;
     float: none;
+    clear: both;
   }
 }
 #nav #nav-menu li a {
@@ -6498,7 +6499,7 @@ samp,
 }
 @media only screen and (min-width: 992px) {
   #nav #social-icons {
-    position: absolute;
+    float: right;
   }
 }
 #nav #social-icons li {
@@ -6558,6 +6559,12 @@ samp,
 #header #title a:focus {
   color: #fff;
   text-decoration: none;
+}
+#header #title-img {
+  border: none !important;
+}
+#header #title-img[src=""] {
+  display: none;
 }
 #nav {
   font-size: 1.1em;
