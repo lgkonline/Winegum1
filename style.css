@@ -6529,11 +6529,12 @@ samp,
 }
 .post .post-meta {
   padding: 15px 20px;
+  background-color: #fff;
 }
 @media only screen and (min-width: 992px) {
   .post .post-meta {
     float: right;
-    margin-left: 20px;
+    padding-left: 40px;
   }
 }
 .post .post-meta li {
@@ -6542,6 +6543,9 @@ samp,
 .post .post-meta > li {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+#sidebar .panel-body-1 {
+  display: none;
 }
 #header {
   color: #fff;
@@ -6615,7 +6619,7 @@ samp,
   border-bottom: 4px solid #ecf0f1;
   background-color: #ecf0f1;
 }
-#main .container {
+#main #main-container {
   background-color: #fff;
   padding: 30px 20px;
 }
@@ -6637,4 +6641,14 @@ samp,
 #footer a:hover,
 #footer a:focus {
   color: #b9d4ec;
+}
+#copyright-line {
+  text-align: right;
+}
+#copyright-line a {
+  color: rgba(255, 255, 255, 0.2);
+}
+#copyright-line a:hover {
+  color: #ffffff;
+  text-decoration: none;
 }

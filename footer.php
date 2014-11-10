@@ -1,6 +1,14 @@
         <div id="footer">
         	<div class="container">
-        		&copy; Copyright | <a href="#">Link</a>
+<!--        		<div class="row">-->
+        			<?php dynamic_sidebar( 'footer-text' ); ?>
+<!--        		</div>-->
+       		
+       			<div class="clearfix"></div>
+        		
+        		<p id="copyright-line">
+        			<a href="http://lgkonline.com" target="_blank">Theme by LGK</a>
+        		</p>
         	</div>
         </div><!-- /#footer -->
         

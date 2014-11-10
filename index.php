@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
 		<div id="main">
-			<div class="container">
+			<div id="main-container" class="container">
 				<div id="content">
 					<?php if (have_posts()) : ?>
 					<?php while (have_posts()) : the_post(); ?>
 					<div class="post">
-						<h1 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+						<h1 class="page-header post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 						
 						<div class="post-content">
 							<?php the_content(); ?>

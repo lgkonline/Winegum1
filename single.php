@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 		<div id="main">
-			<div class="container">
+			<div id="main-container" class="container">
 				<div id="content">
 					<?php if (have_posts()) : ?>
 					<?php while (have_posts()) : the_post(); ?>
@@ -30,7 +30,7 @@
 							</ul>
 						</div>
 					
-						<h1 class="post-title"><?php the_title(); ?></h1>
+						<h1 class="page-header post-title"><?php the_title(); ?></h1>
 						
 						<div class="post-content">
 							<?php the_content(); ?>
@@ -43,6 +43,8 @@
 					</ul>
 					<?php endif; ?>
 				</div><!-- /.content -->
+				
+				<?php comments_template(); ?>
 			</div><!-- /.container -->
 		</div><!-- /#main -->
         

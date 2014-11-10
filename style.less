@@ -77,6 +77,7 @@ code, kbd, pre, samp, .post-content {
 }
 
 .post {
+	
 	.post-title a:hover {
 		text-decoration: none;
 		border-bottom: 1px solid;
@@ -85,9 +86,10 @@ code, kbd, pre, samp, .post-content {
 	.post-meta {
 		@media only screen and (min-width: 992px) {
 			float: right;
-			margin-left: 20px;
+			padding-left: 40px;
 		}
 		padding: 15px 20px;
+		background-color: #fff;
 		
 		li {
 			list-style: none;
@@ -99,6 +101,18 @@ code, kbd, pre, samp, .post-content {
 		margin-bottom: 10px;
 	}
 }
+
+#sidebar {
+	.panel-body-1 {
+		display: none;
+	}
+}
+
+//#comment-form {
+//	#comment-form-more {
+//		display: none;
+//	}
+//}
 
 @import url(less/header.less);
 @import url(less/nav.less);
