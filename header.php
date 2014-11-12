@@ -59,13 +59,13 @@ elseif (is_page() ) { bloginfo('name'); if(get_bloginfo('name') != "") echo ': '
 							MENU							
 						</a></li>
 						
-						<li class="si-twitter si"><a href="#" title="Twitter" class="btn btn-link" data-rgb="52, 152, 219"><i class="fa fa-twitter"></i></a></li>
-						<li class="si-youtube si"><a href="#" title="YouTube" class="btn btn-link" data-rgb="231, 76, 60"><i class="fa fa-youtube-play"></i></a></li>
-						<li class="si-facebook si"><a href="#" title="Facebook" class="btn btn-link" data-rgb="59, 89, 153"><i class="fa fa-facebook"></i></a></li>
-						<li class="si-google-plus si"><a href="#" title="Google+" class="btn btn-link" data-rgb="221, 75, 57"><i class="fa fa-google-plus"></i></a></li>
-<!--						<li class="si-instagram si"><a href="#" title="Instagram" class="btn btn-link" data-rgb="81, 127, 164"><i class="fa fa-instagram"></i></a></li>-->
-						<li class="si-github si"><a href="#" title="GitHub" class="btn btn-link" data-rgb="68, 48, 92"><i class="fa fa-github"></i></a></li>
-						<li class="si-vine si"><a href="#" title="Vine" class="btn btn-link" data-rgb="0, 191, 143"><i class="fa fa-vine"></i></a></li>
+						<?php 
+
+						$socials = get_option('kb_theme_options')['social'];
+						if (isset($socials)) {
+							winegum_social($socials); 
+						}
+						?>
 						
 						<li><button type="button" title="Search" id="search-toggle" class="btn btn-link"><span class="glyphicon glyphicon-search"></span></button></li>
 					</ul>
@@ -95,3 +95,4 @@ elseif (is_page() ) { bloginfo('name'); if(get_bloginfo('name') != "") echo ': '
 				</div>
 			</div><!-- /#nav -->
 		</div><!-- /#wrapper -->
+		

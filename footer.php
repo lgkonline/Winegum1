@@ -1,14 +1,31 @@
-        <div id="footer">
+		<div id="footer">
+      		<?php if (is_active_sidebar('footer-text')) : ?>
+       		<div id="footer-widgets">
+       			<div class="container">
+       				<?php dynamic_sidebar( 'footer-text' ); ?>
+       			</div>
+       		</div>
+       		<?php endif; ?>
+       	
         	<div class="container">
-<!--        		<div class="row">-->
-        			<?php dynamic_sidebar( 'footer-text' ); ?>
-<!--        		</div>-->
-       		
        			<div class="clearfix"></div>
-        		
-        		<p id="copyright-line">
-        			<a href="http://lgkonline.com" target="_blank">Theme by LGK</a>
-        		</p>
+       			
+       			<div class="row">
+       				<div class="col-md-6">
+       					<p>
+						<?php
+							$options = get_option('kb_theme_options');
+							echo $options['copyright'];
+						?>       						
+       					</p>
+       				</div>
+       				
+       				<div class="col-md-6">
+						<p id="copyright-line">
+							<a href="http://lgkonline.com" target="_blank">Theme by LGK</a>
+						</p>       					
+       				</div>
+       			</div>
         	</div>
         </div><!-- /#footer -->
         

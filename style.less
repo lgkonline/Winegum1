@@ -77,6 +77,9 @@ code, kbd, pre, samp, .post-content {
 }
 
 .post {
+	.post-content {
+		.clearfix();
+	}
 	
 	.post-title a:hover {
 		text-decoration: none;
@@ -84,21 +87,16 @@ code, kbd, pre, samp, .post-content {
 	}
 	
 	.post-meta {
-		@media only screen and (min-width: 992px) {
-			float: right;
-			padding-left: 40px;
-		}
-		padding: 15px 20px;
-		background-color: #fff;
+		border: 1px solid @cloud-white;
 		
 		li {
 			list-style: none;
+			float: left
 		}
 	}
 	
 	.post-meta > li {
-		margin-top: 10px;
-		margin-bottom: 10px;
+		margin: 10px 15px;
 	}
 }
 
@@ -108,11 +106,27 @@ code, kbd, pre, samp, .post-content {
 	}
 }
 
-//#comment-form {
-//	#comment-form-more {
-//		display: none;
-//	}
-//}
+.widget {
+	ul, ol {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	li {
+		padding: 5px 0;
+	}
+}
+
+.alignright, .alignleft {
+	margin-bottom: 15px;
+}
+.alignright {
+	margin-left: 20px;
+}
+.alignleft {
+	margin-right: 20px;
+}
 
 @import url(less/header.less);
 @import url(less/nav.less);

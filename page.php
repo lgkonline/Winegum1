@@ -2,12 +2,12 @@
 
 		<div id="main">
 			<div id="main-container" class="container">
-				<?php winegum_sidebar('index', 'start'); ?>
+				<?php winegum_sidebar('page', 'start'); ?>
 					<div id="content">
 						<?php if (have_posts()) : ?>
 						<?php while (have_posts()) : the_post(); ?>
 						<div class="post">
-							<h1 class="page-header post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+							<h1 class="page-header post-title"><?php the_title(); ?></h1>
 
 							<div class="post-content">
 								<?php the_content(); ?>
@@ -20,7 +20,8 @@
 						</ul>
 						<?php endif; ?>
 					</div><!-- /.content -->
-				<?php winegum_sidebar('index', 'end'); ?>
+
+				<?php winegum_sidebar('page', 'end'); ?>
 			</div><!-- /.container -->
 		</div><!-- /#main -->
         

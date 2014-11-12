@@ -1,6 +1,3 @@
-
-<hr>
-
 <div id="comment-form">
 	<form class="form" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
 		<textarea class="form-control" rows="4" name="comment" placeholder="..."></textarea>

@@ -4,7 +4,8 @@
 
 
 // Mixin and adjust the regular image class
-.thumbnail {
+.thumbnail, .wp-caption {
+  font-family: @font-family-sans-serif;
   display: block;
   padding: @thumbnail-padding;
   margin-bottom: @line-height-computed;
@@ -29,7 +30,7 @@
   }
 
   // Image captions
-  .caption {
+  .caption, .wp-caption-text {
     padding: @thumbnail-caption-padding;
     color: @thumbnail-caption-color;
   }

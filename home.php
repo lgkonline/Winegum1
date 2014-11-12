@@ -1,14 +1,8 @@
-<?php get_header(); 
-
-$is_sidebar = is_active_sidebar('sidebar');
-?>
+<?php get_header(); ?>
 
 		<div id="main">
 			<div id="main-container" class="container">
-				<?php if ($is_sidebar) : ?>
-				<div class="row">
-					<div class="col-md-9">
-				<?php endif; ?>
+				<?php winegum_sidebar('home', 'start'); ?>
 						<div id="content">
 							<?php if (have_posts()) : ?>
 							<?php while (have_posts()) : the_post(); ?>
@@ -26,15 +20,7 @@ $is_sidebar = is_active_sidebar('sidebar');
 							</ul>
 							<?php endif; ?>
 						</div><!-- /.content -->	
-				<?php if ($is_sidebar) : ?>					
-					</div><!-- /.col-md-8 -->
-					
-					<div id="sidebar" class="col-md-3">
-					
-						<?php dynamic_sidebar( 'sidebar' ); ?>
-					</div><!-- /.col-md-4 -->
-				</div><!-- /.row -->
-				<?php endif; ?>
+				<?php winegum_sidebar('home', 'end'); ?>
 			</div><!-- /.container -->
 		</div><!-- /#main -->
         
