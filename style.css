@@ -6669,6 +6669,9 @@ samp,
 #main .post-content {
   font-family: "Source Serif Pro", serif;
 }
+#main .post-content .btn {
+  font-family: "Source Sans Pro", sans-serif;
+}
 #footer {
   z-index: 2;
   background-color: #333333;
