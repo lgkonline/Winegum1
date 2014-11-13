@@ -8,6 +8,6 @@ Otherwise the "Theme by LGK" hyperlink must not be removed.
 The use of Winegum as a WordPress theme is free for all. For personal and commercial use.
 
 
-&copy; 2014 LGK
-Website: http://lgkonline.com
+&copy; 2014 LGK<br>
+Website: http://lgkonline.com<br>
 Contact: info@lgkonline.com
