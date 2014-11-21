@@ -50,7 +50,7 @@ global $social_links;
 $social_links = array(
 	'facebook' => array(
 		'id' => 'facebook', 
-		'url' => 'http://facebook.com/', 
+		'url' => 'http://facebook.com/TTTT', 
 		'label' => 'Facebook', 
 		'fa_class' => 'fa-facebook',
 		'rgb' => '59, 89, 153',
@@ -58,7 +58,7 @@ $social_links = array(
 	),
 	'twitter' => array(
 		'id' => 'twitter', 
-		'url' => 'http://twitter.com/', 
+		'url' => 'http://twitter.com/TTTT', 
 		'label' => 'Twitter', 
 		'fa_class' => 'fa-twitter',
 		'rgb' => '52, 152, 219',
@@ -66,7 +66,7 @@ $social_links = array(
 	),
 	'youtube' => array(
 		'id' => 'youtube', 
-		'url' => 'http://youtube.com/', 
+		'url' => 'http://youtube.com/TTTT', 
 		'label' => 'YouTube', 
 		'fa_class' => 'fa-youtube-play',
 		'rgb' => '231, 76, 60',
@@ -74,7 +74,7 @@ $social_links = array(
 	),
 	'instagram' => array(
 		'id' => 'instagram', 
-		'url' => 'http://instagram.com/', 
+		'url' => 'http://instagram.com/TTTT', 
 		'label' => 'Instagram', 
 		'fa_class' => 'fa-instagram',
 		'rgb' => '81, 127, 164',
@@ -82,7 +82,7 @@ $social_links = array(
 	),
 	'github' => array(
 		'id' => 'github', 
-		'url' => 'http://github.com/', 
+		'url' => 'http://github.com/TTTT', 
 		'label' => 'GitHub', 
 		'fa_class' => 'fa-github',
 		'rgb' => '68, 48, 92',
@@ -90,7 +90,7 @@ $social_links = array(
 	),
 	'vine' => array(
 		'id' => 'vine', 
-		'url' => 'http://vine.com/', 
+		'url' => 'http://vine.com/TTTT', 
 		'label' => 'Vine', 
 		'fa_class' => 'fa-vine',
 		'rgb' => '0, 191, 143',
@@ -98,13 +98,68 @@ $social_links = array(
 	),
 	'google-plus' => array(
 		'id' => 'google-plus', 
-		'url' => 'http://plus.google.com/', 
+		'url' => 'http://plus.google.com/TTTT', 
 		'label' => 'Google+', 
-		'fa_class' => 
-		'fa-google-plus',
+		'fa_class' => 'fa-google-plus',
 		'rgb' => '221, 75, 57',
 		'placeholder' => 'Google+ ID'
-	)
+	),
+	'deviantart' => array(
+		'id' => 'deviantart', 
+		'url' => 'http://TTTT.deviantart.com', 
+		'label' => 'DeviantART', 
+		'fa_class' => 'fa-deviantart',
+		'rgb' => '191, 206, 0',
+		'placeholder' => 'User name'
+	),
+	'tumblr' => array(
+		'id' => 'tumblr', 
+		'url' => 'http://TTTT.tumblr.com', 
+		'label' => 'Tumblr', 
+		'fa_class' => 'fa-tumblr',
+		'rgb' => '51, 75, 101',
+		'placeholder' => 'User name'
+	),
+	'twitch' => array(
+		'id' => 'twitch', 
+		'url' => 'http://twitch.tv/TTTT', 
+		'label' => 'Twitch', 
+		'fa_class' => 'fa-twitch',
+		'rgb' => '100, 65, 165',
+		'placeholder' => 'User name'
+	),
+	'dribbble' => array(
+		'id' => 'dribbble', 
+		'url' => 'http://dribbble.com/TTTT', 
+		'label' => 'Dribbble', 
+		'fa_class' => 'fa-dribbble',
+		'rgb' => '201, 42, 103',
+		'placeholder' => 'User name'
+	),
+	'reddit' => array(
+		'id' => 'reddit', 
+		'url' => 'http://reddit.com/user/TTTT', 
+		'label' => 'reddit', 
+		'fa_class' => 'fa-reddit',
+		'rgb' => '206, 227, 248',
+		'placeholder' => 'User name'
+	),
+	'vimeo' => array(
+		'id' => 'vimeo', 
+		'url' => 'http://vimeo.com/TTTT', 
+		'label' => 'Vimeo', 
+		'fa_class' => 'fa-vimeo-square',
+		'rgb' => '32, 185, 235',
+		'placeholder' => 'User name'
+	),
+	'flickr' => array(
+		'id' => 'flickr', 
+		'url' => 'http://www.flickr.com/people/TTTT', 
+		'label' => 'Vimeo', 
+		'fa_class' => 'fa-flickr',
+		'rgb' => '33, 107, 214',
+		'placeholder' => 'User name'
+	),
 );
 
 add_action( 'admin_init', 'theme_options_init' );
@@ -245,7 +300,7 @@ function winegum_social($socials) {
 	?>
 	<li class="si-<?php echo $social_links[$key]['id']; ?> si">
 		<a 
-			href="<?php echo $social_links[$key]['url'] . $item; ?>" 
+			href="<?php echo str_replace('TTTT', $item, $social_links[$key]['url']); ?>" 
 			title="<?php echo $social_links[$key]['label']; ?>" 
 			class="btn btn-link" 
 			data-rgb="<?php echo $social_links[$key]['rgb']; ?>"
