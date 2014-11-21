@@ -51,12 +51,7 @@ elseif (is_page() ) { bloginfo('name'); if(get_bloginfo('name') != "") echo ': '
 				
 					<ul id="social-icons">
 						<li><a href="#" class="btn btn-link" id="nav-open">
-							<span class="icon-hamburger">
-								<span></span>
-								<span></span>
-								<span></span>
-							</span>						
-							MENU							
+							<i class="fa fa-bars"></i> MENU							
 						</a></li>
 						
 						<?php 
