@@ -6,7 +6,7 @@ register_nav_menus( array(
 
 $background_args = array(
 	'default-color' => '914c3b',
-	'default-image' => '%1$s/images/default.jpg',
+	'default-image' => get_template_directory_uri().'/images/default.jpg',
 );
 add_theme_support( 'custom-background', $background_args );
 
