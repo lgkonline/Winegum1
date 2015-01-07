@@ -6580,6 +6580,9 @@ samp,
 .sub-menu {
 	min-width: 180px;
 }
+.sub-menu .fa.pull-right {
+	margin-top: .3em;
+}
 #header {
   color: #fff;
 }
