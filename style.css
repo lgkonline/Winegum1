@@ -6577,6 +6577,9 @@ samp,
 .alignleft {
   margin-right: 20px;
 }
+.sub-menu {
+	min-width: 180px;
+}
 #header {
   color: #fff;
 }
