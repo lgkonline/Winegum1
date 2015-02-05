@@ -3,12 +3,16 @@ function search_toggle() {
 	$('#search-form').toggle();
 	$('#search-toggle').toggleClass('active');
 	$('#search-form').animate({
-		width: '300px'
+		width: '276px'
 	});
 	$('#search-input').select();
 }
 
 $(function() {
+	$.stellar({
+		horizontalScrolling: false
+	});
+	
 	$('#search-toggle').click(function() {
 		search_toggle();
 	});
@@ -65,5 +69,4 @@ $(function() {
 	$('#comment-form').click(function() {
 		$('#comment-form-more').show();
 	});
-	
 });
