@@ -9,7 +9,7 @@ elseif (is_single() ) { single_post_title(); }
 elseif (is_page() ) { bloginfo('name'); if(get_bloginfo('name') != "") echo ': '; single_post_title(); }
  else { wp_title('',true); } ?></title>
         
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
    
