@@ -32,8 +32,17 @@ elseif (is_page() ) { bloginfo('name'); if(get_bloginfo('name') != "") echo ': '
     </head>
 
     <body>
-    	<div id="wrapper">
-			<div id="header">
+    	<div id="wrapper" data-stellar-background-ratio="0.5">
+    		<?php
+				$custom_header_height = $options = get_option('kb_theme_options')['custom_header_height']; 
+				if (isset($custom_header_height)) {
+					$custom_header_height_css = 'height: ' . $custom_header_height . ';';
+				}
+				else {
+					$custom_header_height_css = '';
+				}
+			?>
+			<div id="header" style="<?php echo $custom_header_height_css; ?>">
 				<div class="container">
 					<h1 id="title">
 						<a href="<?php bloginfo('url'); ?>">

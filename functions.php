@@ -5,8 +5,8 @@ register_nav_menus( array(
 ) );
 
 $background_args = array(
-	'default-color' => '914c3b',
-	'default-image' => get_template_directory_uri().'/images/default.jpg',
+	'default-color' => 'a5524f',
+	'default-image' => get_template_directory_uri().'/images/colorful.jpg',
 );
 add_theme_support( 'custom-background', $background_args );
 
@@ -199,6 +199,11 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 				<th scope="row">Copyright</th>
 				<td><input id="kb_theme_options[copyright]" class="regular-text" type="text" name="kb_theme_options[copyright]" value="<?php esc_attr_e( $options['copyright'] ); ?>" /></td>
 			</tr> 
+			
+			<tr valign="top">
+				<th scope="row">Custom header height</th>
+				<td><input id="kb_theme_options[custom_header_height]" class="regular-text" type="text" name="kb_theme_options[custom_header_height]" value="<?php esc_attr_e( $options['custom_header_height'] ); ?>" placeholder="e.g. 200px" /></td>
+			</tr> 			
 
 			<?php
 			$sidebar_appearence = array(
