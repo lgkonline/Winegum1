@@ -1,6 +1,6 @@
 <h1>Winegum - Theme for WordPress</h1>
 
-<p>THIS IS THE RELEASE</p>
+<p>THIS IS THE DEV</p>
 
 <p>
 Winegum is a beautiful theme for WordPress. It supports feauteres like custom headers, logo and headline. You decide on which places want to show a sidebar with widgets. If you wish you can even place widgets on the footer.
