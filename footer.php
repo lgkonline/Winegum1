@@ -22,7 +22,7 @@
        				
        				<div class="col-md-6">
 						<p id="copyright-line">
-							<a href="http://lgkonline.com" target="_blank">Theme by LGK</a>
+							<a href="http://lgk.io" target="_blank">Theme by LGK</a>
 						</p>       					
        				</div>
        			</div>

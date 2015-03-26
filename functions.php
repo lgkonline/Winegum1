@@ -155,11 +155,11 @@ $social_links = array(
 	'flickr' => array(
 		'id' => 'flickr', 
 		'url' => 'http://www.flickr.com/people/TTTT', 
-		'label' => 'Vimeo', 
+		'label' => 'Flickr', 
 		'fa_class' => 'fa-flickr',
 		'rgb' => '33, 107, 214',
 		'placeholder' => 'User name'
-	),
+	)
 );
 
 add_action( 'admin_init', 'theme_options_init' );
@@ -172,7 +172,7 @@ function theme_options_init(){
 
 // Seite in der Dashboard-Navigation erstellen
 function theme_options_add_page() {
-	add_theme_page('More options', 'More options', 'edit_theme_options', 'theme-optionen', 'kb_theme_options_page' ); // Seitentitel, Titel in der Navi, Berechtigung zum Editieren (http://codex.wordpress.org/Roles_and_Capabilities) , Slug, Funktion 
+	add_theme_page('More options', 'Social links and more', 'edit_theme_options', 'theme-optionen', 'kb_theme_options_page' ); // Seitentitel, Titel in der Navi, Berechtigung zum Editieren (http://codex.wordpress.org/Roles_and_Capabilities) , Slug, Funktion 
 }
 
 // Optionen-Seite erstellen
