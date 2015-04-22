@@ -193,7 +193,6 @@ if ( ! isset( $_REQUEST['settings-updated'] ) )
 	<form method="post" action="options.php">
 		<?php settings_fields( 'kb_options' ); ?>
 		<?php $options = get_option( 'kb_theme_options' ); ?>
-		<?php print_r($options); ?>
 
 		<table class="form-table">
 			<tr valign="top">
@@ -326,11 +325,9 @@ function winegum_sidebar($template, $position) {
 	
 	
 	if ($template == 'home') {
-		print_r($options);
-		
 		$option = $options['sidebar_hide_home'];
 		
-		if ($is_sidebar && $option != 'true') {
+		if (is_sidebar && $option != 'true') {
 			$show_sidebar = true;
 		}
 	}

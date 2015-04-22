@@ -6,8 +6,6 @@
 Theme Name: Winegum
 Theme URI: http://lgk.io/winegum
 Version: 1.5
-License: Creative Commons Attribution 4.0 International (CC BY 4.0)
-License URI: http://creativecommons.org/licenses/by/4.0/
 Description: Winegum is a customizable theme which uses Bootstrap as a backbone.
 Author: Lars Kliesing (LGK)
 Author URI: http://lgk.io
@@ -6585,13 +6583,6 @@ samp,
 }
 .sub-menu .fa.pull-right {
   margin-top: .3em;
-}
-.sticky {
-  font-weight: bold;
-}
-.gallery-caption,
-.bypostauthor {
-  font-weight: normal;
 }
 #header {
   color: #fff;
